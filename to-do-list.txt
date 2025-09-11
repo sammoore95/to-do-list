@@ -1,4 +1,4 @@
-get eggs
-get milk
 get bread
-get bacon
+get beer
+get toilet paper
+get python book

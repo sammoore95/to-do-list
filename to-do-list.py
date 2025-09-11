@@ -1,11 +1,20 @@
 
 def print_options():
+    """Prints list options, and returns a valid user selection"""
     print("""
-          What would you like to do? 
+          =======To-Do List=======
           1. View List
           2. Add To List
           3. Remove Item From List
           4. Exit""")
+    while True:
+        # ensures valid user selection
+        user_option = get_int("What option would you like to select? (int) ")
+        if user_option <= 4:
+            break
+        else:
+            print("Please enter an integer from the list of options ")
+    return user_option
 
 
 def get_int(prompt):
@@ -74,3 +83,27 @@ def show_list():
     with open("to-do-list.txt", "r") as f:
         to_do_list = f.read()
         print(to_do_list)              
+
+
+def to_do_list():
+    """Final application. Allowing for the selction of features based on a valid user input"""
+    while True:
+        option_choice = print_options()
+        
+        if option_choice == 1:
+            show_list()
+        elif option_choice == 2:
+            add_to_list()
+        elif option_choice == 3:
+            remove_from_list()
+        elif option_choice == 4:
+            print("Exiting List")
+            break
+
+def main():
+    to_do_list()
+
+main()
+
+
+
