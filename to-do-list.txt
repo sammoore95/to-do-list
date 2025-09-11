@@ -1,0 +1,4 @@
+get eggs
+get milk
+get bread
+get bacon

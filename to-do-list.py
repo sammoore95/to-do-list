@@ -67,4 +67,10 @@ def remove_from_list():
                     break
                 else:
                     print("That item is not in the list, please enter an item in the list.")
-                    
+
+
+def show_list():    
+    """Displays current to-do list to the user"""
+    with open("to-do-list.txt", "r") as f:
+        to_do_list = f.read()
+        print(to_do_list)              
